@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/countdown"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+        android:layout_marginTop="0dp"
+
+        android:textSize="25sp"
+
+        app:layout_constraintBottom_toTopOf="@id/theme_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/theme_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="2dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/countdown"
+        app:layout_constraintBottom_toTopOf="@id/question_image"/>
+
+    <ImageView
+        android:id="@+id/question_image"
+
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/theme_text"
+        app:layout_constraintBottom_toTopOf="@id/chosen_answer"/>
+
+    <TextView
+        android:id="@+id/question_text"
+
+        android:textAlignment="center"
+        android:textSize="21sp"
+        android:textColor="@color/black"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_image"
+        app:layout_constraintBottom_toTopOf="@id/chosen_answer" />
+
+    <TextView
+        android:id="@+id/chosen_answer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/text_choose_answer"
+
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/question_text"
+        app:layout_constraintBottom_toTopOf="@id/btn_answer_var_one" />
+
+    <Button
+        android:id="@+id/btn_answer_var_one"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/btn_answer_var_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chosen_answer" />
+
+    <Button
+        android:id="@+id/btn_answer_var_two"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/btn_answer_var_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_answer_var_one" />
+
+    <Button
+        android:id="@+id/btn_answer_var_three"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/btn_answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_answer_var_two" />
+
+    <Button
+        android:id="@+id/btn_answer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:text="@string/text_answer"
+
+        android:layout_marginBottom="24dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_answer_var_three"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
